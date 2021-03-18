@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SYBaseModel : NSObject<SYClassCache, NSCopying>
 
+- (BOOL)__SY_Save;
+
 - (BOOL)__SY_Insert;
 
 - (BOOL)__SY_Delete;

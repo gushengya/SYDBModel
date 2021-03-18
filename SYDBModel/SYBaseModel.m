@@ -28,6 +28,12 @@ static NSMutableArray *instanceClasses;
 
 #pragma mark- 数据库操作
 
+- (BOOL)__SY_Save
+{
+    if (self.primaryKey <= 0) return [self __SY_Insert];
+    return [self __SY_Update];
+}
+
 - (BOOL)__SY_Insert
 {
     __block BOOL result = YES;
